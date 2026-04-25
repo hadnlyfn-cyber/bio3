@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>ay3ent</title>
+
+  <meta name="description" content="ay3ent bio links" />
+  <meta name="theme-color" content="#8b35ff" />
+
+  <meta property="og:title" content="ay3ent" />
+  <meta property="og:description" content="official bio links" />
+  <meta property="og:image" content="avatar.jpg" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <canvas class="particles" id="particles" aria-hidden="true"></canvas>
+
+  <section class="intro" id="intro">
+    <div class="intro-glass">
+      <p class="enter-text">click to enter</p>
+    </div>
+  </section>
+
+  <main class="main">
+    <section class="bio-card" id="bioCard">
+      <div class="top-glow"></div>
+
+      <div class="avatar-wrap">
+        <img src="avatar.jpg" alt="ay3ent avatar" class="avatar" />
+      </div>
+
+      <h1 class="nickname" id="typingName" data-text="ay3ent"></h1>
+
+      <nav class="socials" aria-label="social links">
+        <a
+          class="social-link"
+          href="https://twitch.tv/ay3ent"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Twitch ay3ent"
+        >
+          <span class="icon-box">
+            <img src="twitch.png" alt="" />
+          </span>
+          <span class="social-title">twitch</span>
+        </a>
+
+        <a
+          class="social-link"
+          href="https://t.me/ay3ent"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Telegram ay3ent"
+        >
+          <span class="icon-box">
+            <img src="tg.png" alt="" />
+          </span>
+          <span class="social-title">telegram</span>
+        </a>
+      </nav>
+
+      <section class="player" aria-label="music player">
+        <canvas id="visualizer" class="visualizer" width="720" height="110"></canvas>
+
+        <div class="player-row">
+          <button class="round-btn" id="playBtn" type="button" aria-label="play or pause">
+            <span id="playIcon">▶</span>
+          </button>
+
+          <div class="track-info">
+            <strong>ay3ent vibe</strong>
+            <span>mus.mp3</span>
+          </div>
+
+          <button class="round-btn small" id="muteBtn" type="button" aria-label="mute">
+            <span id="muteIcon">🔊</span>
+          </button>
+        </div>
+
+        <div class="progress-row">
+          <span id="currentTime">0:00</span>
+          <input
+            id="progress"
+            class="range progress"
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+            step="0.1"
+            aria-label="track progress"
+          />
+          <span id="duration">0:00</span>
+        </div>
+
+        <div class="volume-row">
+          <span class="volume-label">volume</span>
+          <input
+            id="volume"
+            class="range volume"
+            type="range"
+            min="0"
+            max="1"
+            value="0.75"
+            step="0.01"
+            aria-label="volume"
+          />
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <audio id="audio" src="mus.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
